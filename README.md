@@ -20,4 +20,8 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+- Please follow the instructions specific to your 401 language which can be found in the directory below, matching your course.
+
+| Challenges  |      Link     | 
+|----------|:-------------:|
+| reverse array |[challenge1](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/main/java/arrayReverse1/README.md)| 
