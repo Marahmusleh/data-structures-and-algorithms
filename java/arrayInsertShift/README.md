@@ -4,3 +4,7 @@ click on the image.
 <img src= "./inserShiftArray.png" height="300" width="1000" alt="">
 
   [Back to table](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/main/java/README.md)
+
+## Approach & Efficiency
+
+I first declared a new array and a new variable to to take the middle index then used a simple for loop to fill the new array with values.
