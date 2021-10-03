@@ -5,21 +5,12 @@ public class Linkedlist {
   Node head;
   private int size;
 
-public void insert(String data){
-  if(head == null){
-    head= new Node(data);
-    size++;
-  }else {
-   Node current = head ;
-   while(current.getNext() != null){
-     current = current.getNext();
-   }
-    Node node = new Node(data);
-    current.setNext(node);
-    size++;
+  public void insert(String value) {
+    Node newNode = new Node(value);
+    if (head != null)
+      newNode.setNext(head);
+    head = newNode;
   }
-}
-
 
 @Override
   public String toString() {
@@ -32,8 +23,8 @@ public void insert(String data){
 
       while (current != null) {
         result += "{ " + current.getData() + " } -> ";
+        current = current.next;
 
-        current = current.getNext();
       }
 
       result += ("NULL");

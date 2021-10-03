@@ -19,9 +19,9 @@ class MainTest {
   @Test
   void canInsert() {
     Linkedlist MyTest = new Linkedlist();
-    MyTest.insert("a");
-    MyTest.insert("b");
     MyTest.insert("c");
+    MyTest.insert("b");
+    MyTest.insert("a");
     String expected = "{ a } -> { b } -> { c } -> NULL";
     assertEquals(expected, MyTest.toString());
   }
@@ -29,19 +29,19 @@ class MainTest {
   @Test
   void headPointsRight() {
     Linkedlist MyTest = new Linkedlist();
-    MyTest.insert("a");
-    MyTest.insert("b");
     MyTest.insert("c");
+    MyTest.insert("b");
+    MyTest.insert("a");
     assertEquals("a", MyTest.head.getData());
   }
 
   @Test
   void canInsertMultiple() {
     Linkedlist MyTest = new Linkedlist();
-    MyTest.insert("a");
-    MyTest.insert("b");
-    MyTest.insert("c");
     MyTest.insert("d");
+    MyTest.insert("c");
+    MyTest.insert("b");
+    MyTest.insert("a");
     String expected = "{ a } -> { b } -> { c } -> { d } -> NULL";
     assertEquals(expected, MyTest.toString());
   }
@@ -69,9 +69,9 @@ class MainTest {
   @Test
   void includesWorkingFine() {
     Linkedlist ll = new Linkedlist();
-     ll.insert("a");
-     ll.insert("b");
      ll.insert("c");
+     ll.insert("b");
+     ll.insert("a");
 
     String expected = "{ a } -> { b } -> { c } -> NULL";
     assertEquals(expected, ll.toString());
