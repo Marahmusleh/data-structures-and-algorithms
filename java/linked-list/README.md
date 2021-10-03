@@ -16,6 +16,7 @@ That will confirm that the next node in the list isn't null
 
 **Space -> o(1)**
 **Time -> O(n)**
+
 ## Linked List (challenge5):
 ##API
 The linked list should contain the following methods with their tests:
