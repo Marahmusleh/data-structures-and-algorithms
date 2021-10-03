@@ -2,7 +2,7 @@ package linked.list;
 
 public class Node {
   private String data; // to store the data of node
-  private Node next; // to store the address of the next node
+  public Node next; // to store the address of the next node
 
   public Node(String data) {
     this.data = data;
