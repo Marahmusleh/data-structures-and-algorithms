@@ -76,4 +76,161 @@ class MainTest {
     String expected = "{ a } -> { b } -> { c } -> NULL";
     assertEquals(expected, ll.toString());
   }
+
+  //--------------------------------challenge6----------
+
+  @Test void addOneToTheEnd(){
+    Linkedlist mylist = new Linkedlist();
+
+    mylist.append("tala");
+
+    Node current = mylist.head;
+    String actual = "";
+    while(current != null){
+      actual +=  "{ " + current.getData() + " } -> ";
+      current = current.next;
+    }
+    actual += "NULL";
+
+    String expected = "{ tala } -> NULL";
+
+    assertEquals(expected,actual);
+  }
+
+  @Test
+  void addMultipleToTheEnd() {
+    Linkedlist ll = new Linkedlist();
+    Node n1 = new Node("end");
+    Node n2 = new Node("anything");
+    ll.head = n1;
+    n1.next = n2;
+
+    ll.append("one");
+    ll.append("two");
+    ll.append("three");
+
+    Node current = ll.head;
+    String actual = "";
+    while (current != null) {
+      actual += "{ " + current.getData() + " } -> ";
+      current = current.next;
+    }
+    actual += "NULL";
+
+    String expected = "{ end } -> { anything } -> { one } -> { two } -> { three } -> NULL";
+
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  void addBeforeMiddle(){
+    Linkedlist ll = new Linkedlist();
+    Node n1 = new Node("1");
+    Node n2 = new Node("2");
+    Node n3 = new Node("3");
+    Node n4 = new Node("4");
+
+    ll.head = n1;
+    n1.next = n2;
+    n2.next = n3;
+    n3.next = n4;
+
+    ll.insertBefore("3", "10");
+
+    Node current = ll.head;
+    String actual = "";
+    while(current != null){
+      actual +=  "{ " + current.getData() + " } -> ";
+      current = current.next;
+    }
+    actual += "NULL";
+
+    String expected = "{ 1 } -> { 2 } -> { 10 } -> { 3 } -> { 4 } -> NULL";
+
+    assertEquals(expected,actual);
+  }
+
+  @Test //This tests if it can add one node or multiple nodes at the end of the linked list:
+  void addBeforeFirst(){
+    Linkedlist ll = new Linkedlist();
+    Node n1 = new Node("1");
+    Node n2 = new Node("2");
+    Node n3 = new Node("3");
+    Node n4 = new Node("4");
+    ll.head = n1;
+    n1.next = n2;
+    n2.next = n3;
+    n3.next = n4;
+
+    ll.insertBefore("1", "10");
+
+    Node current = ll.head;
+    String actual = "";
+    while(current != null){
+      actual +=  "{ " + current.getData() + " } -> ";
+      current = current.next;
+    }
+    actual += "NULL";
+
+    String expected = "{ 10 } -> { 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL";
+
+    assertEquals(expected,actual);
+
+  }
+
+  @Test
+  void addAfterMiddle(){
+    Linkedlist ll = new Linkedlist();
+    Node n1 = new Node("1");
+    Node n2 = new Node("2");
+    Node n3 = new Node("3");
+    Node n4 = new Node("4");
+
+    ll.head = n1;
+    n1.next = n2;
+    n2.next = n3;
+    n3.next = n4;
+
+    ll.insertAfter("2", "10");
+
+    Node current = ll.head;
+    String actual = "";
+    while(current != null){
+      actual +=  "{ " + current.getData() + " } -> ";
+      current = current.next;
+    }
+    actual += "NULL";
+
+    String expected = "{ 1 } -> { 2 } -> { 10 } -> { 3 } -> { 4 } -> NULL";
+
+    assertEquals(expected,actual);
+  }
+
+  @Test
+  void addAfterLast(){
+    Linkedlist ll = new Linkedlist();
+    Node n1 = new Node("1");
+    Node n2 = new Node("2");
+    Node n3 = new Node("3");
+    Node n4 = new Node("4");
+
+    ll.head = n1;
+    n1.next = n2;
+    n2.next = n3;
+    n3.next = n4;
+
+    ll.insertAfter("4", "10");
+
+    Node current = ll.head;
+    String actual = "";
+    while(current != null){
+      actual +=  "{ " + current.getData() + " } -> ";
+      current = current.next;
+    }
+    actual += "NULL";
+
+    String expected = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 10 } -> NULL";
+
+    assertEquals(expected,actual);
+  }
 }

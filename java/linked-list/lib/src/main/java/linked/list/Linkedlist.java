@@ -1,5 +1,7 @@
 package linked.list;
 
+import java.util.Objects;
+
 public class Linkedlist {
 
   Node head;
@@ -10,6 +12,21 @@ public class Linkedlist {
     if (head != null)
       newNode.setNext(head);
     head = newNode;
+  }
+
+  public void append(String value) {
+    if(head == null){
+      head = new Node(value);
+      size++;
+    }else{
+      Node current = head;
+      while(current.next != null){//keep looping between nodes if the next is not null
+        current=current.getNext();//walking between nodes cuz the next is not null
+      }
+      Node node = new Node(value);//when we reach to null create a node to add the value we need
+      current.setNext(node);
+      size++;
+    }
   }
 
 @Override
@@ -43,5 +60,40 @@ public class Linkedlist {
     return false;
 
   }
+  public void insertAfter(String value, String newValue){
+    Node current = head;
+    Node node = new Node(newValue);
+    size++;
+
+    while(current != null){
+      if (current.getData() == value){
+        node.next = current.next;
+        current.next = node;
+      }
+      current = current.next;
+    }
+  }
+
+  public void insertBefore(String value, String newValue){
+    Node counter = head;
+    Node node = new Node(newValue);
+    size++;
+
+    while(counter.next != null){
+      if(head.getData() == value){
+        node.next = head;
+        head = node;
+        return;
+      }
+      if(counter.next.getData() == value){
+        node.next = counter.next;
+        counter.next = node;
+        return;
+      }
+      counter = counter.next;
+    }
+  }
+
+
 
   }
