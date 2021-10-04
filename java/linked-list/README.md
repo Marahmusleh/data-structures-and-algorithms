@@ -23,4 +23,31 @@ The linked list should contain the following methods with their tests:
 
 * insert: takes an string value and creates a new node into the linked list holding that value.
 * includes: checks if a certain value is in one of the nodes in the linked list.
-* toString: returns a String including all the values of the linked list nodes.
+* toString: returns a String including Approach & Efficiency
+  challenge 06:
+  append
+## Challenge6
+
+## Description of the challenge
+Create a Linked List class which has three methods, append, InsertBefore, InsertAfter.
+````
+append
+Time: O(1)
+Space: O(1)
+
+insert before and insert after:
+
+Time: O(n)
+Space: O(1) the values of the linked list nodes.
+````
+
+### API
+
+* append method: Add new nodes to the last in the linked list.
+* InserBefore method: have an value exists in the linklist and new value to put it before the existing value.
+* InsetAfter method: have an value exists in the linklist and new value to put it after the existing value.
+
+<img src="./challenge6.png">
+
+
+
