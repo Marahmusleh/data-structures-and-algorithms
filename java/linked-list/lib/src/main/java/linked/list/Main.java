@@ -3,7 +3,7 @@ package linked.list;
 import java.util.LinkedList;
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     Linkedlist link = new Linkedlist();
     link.insert("b");
     link.insert("c");
@@ -21,5 +21,6 @@ public class Main {
     System.out.println(ll2.toString());
     ll2.insertBefore("marah","aya");
     System.out.println(ll2.toString());
+    System.out.println(ll2.kthFromEnd(4));
   }
 }

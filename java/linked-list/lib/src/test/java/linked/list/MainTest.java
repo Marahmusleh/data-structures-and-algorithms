@@ -233,4 +233,21 @@ class MainTest {
 
     assertEquals(expected,actual);
   }
+  @Test
+  void kInTheMiddle(){
+    Linkedlist ll = new Linkedlist();
+    ll.append("10");
+    ll.append("11");
+    ll.append("12");
+    ll.append("13");
+
+    String actual = "11";
+    try{
+      actual = ll.kthFromEnd(2);
+    }catch(Exception e){
+      e.printStackTrace();
+
+    };
+    assertEquals("11", actual);
+  }
 }

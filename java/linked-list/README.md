@@ -47,7 +47,23 @@ Space: O(1) the values of the linked list nodes.
 * InserBefore method: have an value exists in the linklist and new value to put it before the existing value.
 * InsetAfter method: have an value exists in the linklist and new value to put it after the existing value.
 
+
 <img src="./challenge6.png">
 
 
+## Challenge7
 
+## Description of the challenge
+
+Create a Linked List class which has three method LinkedListKTH.
+
+## Approach & Efficiency
+
+For LinkedListKTH method: Time => Big O(n), Space => Big O(1)
+
+## API
+
+LinkedListKTH method: method tha it take an index of specific node we need to return the node value for this index
+
+
+<img src="./Limnu_20211005.png">

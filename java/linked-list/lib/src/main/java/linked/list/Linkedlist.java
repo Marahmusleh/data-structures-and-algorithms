@@ -93,7 +93,30 @@ public class Linkedlist {
       counter = counter.next;
     }
   }
+  public  String kthFromEnd(int k) throws Exception{
 
+    int iterations = this.size - k;
+    Node current = head;
+
+    if (this.size == 0){
+      throw new IllegalArgumentException("Linked list is empty!");
+    }else if (this.size == 1){
+      if(k == 0){
+        return head.getData();
+      }
+      throw new Exception("Linked list has only one node!");
+    }else if (k > size){
+      throw new Exception("The number is greater than the length ");
+    }else if (k == size){
+      throw new Exception("Number and the length of the list are the same");
+    }else if (k < 0){
+      throw new Exception("It's not a positive number");
+    }
+    for (int i=0; i<iterations-1; i++){
+      current = current.next;
+    }
+    return current.getData();
+  }
 
 
   }
