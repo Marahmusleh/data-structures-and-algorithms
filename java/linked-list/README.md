@@ -48,7 +48,7 @@ Space: O(1) the values of the linked list nodes.
 * InsetAfter method: have an value exists in the linklist and new value to put it after the existing value.
 
 
-<img src="./challenge6.png">
+<img src="/challenge6.png">
 
 ## Challenge7
 
