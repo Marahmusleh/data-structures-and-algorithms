@@ -22,5 +22,9 @@ public class Main {
     ll2.insertBefore("marah","aya");
     System.out.println(ll2.toString());
     System.out.println(ll2.kthFromEnd(4));
+
+Linkedlist newL = new Linkedlist();
+    System.out.println(newL.zipLists(link,ll2).toString());
+
   }
 }
