@@ -1,5 +1,7 @@
 package StackAndQueue;
 
+import java.util.EmptyStackException;
+
 public class Stack {
 
   private Node top;
@@ -13,9 +15,9 @@ public class Stack {
       top = node;
     }
   }
-  public String pop() throws Exception {
+  public String pop() {
     if (isEmpty()) {
-      throw new Exception("Stack is Empty");
+      throw new EmptyStackException();
     } else {
       String value = top.getValue();
       top = top.getNext(); // assign the top to the next node so the first will be out
@@ -23,9 +25,9 @@ public class Stack {
     }
   }
 
-  public String peek() throws Exception {
+  public String peek() {
     if(isEmpty()){
-      throw new Exception("Stack is Empty");
+      throw new EmptyStackException();
     }else {
       return top.getValue();
     }

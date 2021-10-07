@@ -4,18 +4,21 @@
 package StackAndQueue;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.EmptyStackException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-//  @Test
-//  void testPushOneNodeToStack() {
-//    Stack stack1 = new Stack();
-//    stack1.push("1");
-//    assertEquals("Stack{\n" +
-//      "1\n" +
-//      " }", stack1.toString());
-//  }
+  @Test
+  void pushOneNodeToStack() {
+    Stack stack1 = new Stack();
+    stack1.push("1");
+    assertEquals("Stack{\n" +
+      "1\n" +
+      " }", stack1.toString());
+  }
 
   @Test void canPushToStack(){
     Stack stack = new Stack();
@@ -29,4 +32,118 @@ class AppTest {
       " }";
     assertEquals(expected, stack.toString());
   }
+
+  @Test
+  void popOfTheStack() throws Exception {
+    Stack stack1 = new Stack();
+    stack1.push("1");
+    stack1.push("2");
+    stack1.push("3");
+    stack1.pop();
+
+    assertEquals("Stack{\n" +
+      "2\n" +
+      "1\n" +
+      " }", stack1.toString());
+  }
+
+  @Test
+  void popUntilEmptyStack() throws Exception {
+    Stack stack1 = new Stack();
+    stack1.push("1");
+    stack1.push("2");
+    stack1.push("3");
+    stack1.pop();
+    stack1.pop();
+    stack1.pop();
+    assertEquals("Stack is Empty", stack1.toString());
+  }
+
+  @Test
+  void peekNextItem() throws Exception {
+    Stack stack1 = new Stack();
+    stack1.push("1");
+    stack1.push("2");
+    stack1.push("3");
+    stack1.push("4");
+    stack1.pop();
+    assertEquals("3", stack1.peek());
+  }
+
+  @Test
+  void testInstantiateEmptyStack() {
+    Stack stack1 = new Stack();
+
+    assertEquals("Stack is Empty", stack1.toString());
+  }
+
+  @Test
+  void exceptionPeekOrPopEmptyStack(){
+    Stack stack1 = new Stack();
+    assertThrows(EmptyStackException.class, stack1::peek);
+    assertThrows(EmptyStackException.class, stack1::pop);
+
+  }
+
+  @Test
+  void canEnqueueOneNodeToQueue() {
+    Queue queue1 = new Queue();
+    queue1.enqueue("1");
+    assertEquals("Queue{front -> 1 <- back }", queue1.toString());
+  }
+
+  @Test
+  void canEnqueueMultiNodeToQueue() {
+    Queue queue1 = new Queue();
+    queue1.enqueue("1");
+    queue1.enqueue("2");
+    queue1.enqueue("3");
+    assertEquals("Queue{front -> 1 -> 2 -> 3 <- back }", queue1.toString());
+  }
+
+  @Test
+  void dequeueFromQueue() throws Exception {
+    Queue queue1 = new Queue();
+    queue1.enqueue("1");
+    queue1.enqueue("2");
+    queue1.enqueue("3");
+    assertEquals("1", queue1.dequeue());
+  }
+
+  @Test
+  void peekQueue() throws Exception {
+    Queue queue1 = new Queue();
+    queue1.enqueue("1");
+    queue1.enqueue("2");
+    queue1.enqueue("3");
+    assertEquals("1", queue1.peek());
+  }
+
+  @Test
+  void emptyQueueAfterDequeue() throws Exception {
+    Queue queue1 = new Queue();
+    queue1.enqueue("1");
+    queue1.enqueue("2");
+    queue1.enqueue("3");
+    queue1.dequeue();
+    queue1.dequeue();
+    queue1.dequeue();
+    assertTrue(queue1.isEmpty());
+  }
+
+  @Test
+  void testInstantiateEmptyQueue() {
+    Queue queue1 = new Queue();
+
+    assertEquals("Queue is Empty", queue1.toString());
+  }
+
+  @Test
+  void testExceptionPeekOrDequeueEmptyQueue() throws Exception {
+    Queue queue = new Queue();
+
+    assertThrows(EmptyStackException.class, queue::dequeue);
+    assertThrows(EmptyStackException.class, queue::peek);
+  }
+
 }
