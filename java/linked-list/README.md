@@ -66,4 +66,4 @@ For LinkedListKTH method: Time => Big O(n), Space => Big O(1)
 LinkedListKTH method: method tha it take an index of specific node we need to return the node value for this index
 
 
-<img src="./Limnu_20211005.png">
+<img src="./Challenge7.png">
