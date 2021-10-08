@@ -9,5 +9,9 @@
 |binary-array-search|[challenge3](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/main/java/array-binary-search/README.md) |
 |linked-list|[challenge5](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/main/java/linked-list/README.md)|
 |linked-list-insertions|[challenge6](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/linked-list-insertions/java/linked-list/README.md)|
+|linked-list-kth|[challenge7](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/main/java/linked-list/README.md)|
+|linked-list-zip|[challenge8](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/main/java/linked-list/README.md)|
+|Stack and Queue|[challenge10](https://github.com/Marahmusleh/data-structures-and-algorithms/blob/main/java/StackAndQueue/README.md)|
+
 
  
