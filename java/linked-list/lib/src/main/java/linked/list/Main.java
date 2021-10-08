@@ -24,5 +24,8 @@ public class Main {
     System.out.println(ll2.kthFromEnd(3));
 
 
+Linkedlist newL = new Linkedlist();
+    System.out.println(newL.zipLists(link,ll2).toString());
+
   }
 }

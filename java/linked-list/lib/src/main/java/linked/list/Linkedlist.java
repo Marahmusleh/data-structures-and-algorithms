@@ -1,5 +1,6 @@
 package linked.list;
 
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class Linkedlist {
@@ -122,6 +123,35 @@ public class Linkedlist {
     }
     return "Enter a correct number";
   }
+  public static Linkedlist zipLists(Linkedlist Link1, Linkedlist Link2) {
+    Node l1 = Link1.head;
+    Node l2 = Link2.head;
+    Node current = null;
 
+    if (l1 == null) {
+      return Link2;
+    }
+    if (l2 == null){
+      return Link1;
+    }
 
+    while (l1 != null && l2 != null) {
+      if (l1 != null) {
+        current = l1.next;
+        l1.next = l2;
+        l1 = current;
+      }
+      if (l2 != null) {
+        current = l2.next;
+        if (l1 != null)
+          l2.next = l1;
+        l2 = current;
+      }
+
+    }
+    return Link1;
   }
+
+
+
+}
