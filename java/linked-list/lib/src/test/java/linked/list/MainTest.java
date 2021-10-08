@@ -280,6 +280,7 @@ class MainTest {
     assertEquals("Enter a correct number", actual);
 
   }
+
   @Test
   void testWhenKthNegative() {
     Linkedlist ll = new Linkedlist();
@@ -293,7 +294,9 @@ class MainTest {
     actual = ll.kthFromEnd(-2);
     assertEquals("Enter a correct number", actual);
 
-  } @Test
+  }
+
+  @Test
   void testWhenKthSametoSize() {
     Linkedlist ll = new Linkedlist();
     ll.append("10");
@@ -306,64 +309,65 @@ class MainTest {
     actual = ll.kthFromEnd(4);
     assertEquals("Enter a correct number", actual);
 
-  //--------------lab8----------
-@Test void linkedListZip(){
-  Linkedlist Link1 = new Linkedlist();
-     Link1.append("1");
-     Link1.append("3");
-     Link1.append("2");
-     System.out.println(Link1.toString());
-
-  Linkedlist Link2 = new Linkedlist();
-     Link2.append("5");
-     Link2.append("9");
-     Link2.append("4");
-     System.out.println(Link2.toString());
-
-  Linkedlist NewL = new Linkedlist();
-  assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL", NewL.zipLists(Link1,Link2).toString());
-}
-
-  @Test
-  void bothListsEmpty(){
-    Linkedlist ll = new Linkedlist();
-    Linkedlist ll2 = new Linkedlist();
-    Linkedlist expectedList = new Linkedlist();
-
-    assertEquals(expectedList.toString(), Linkedlist.zipLists(ll,ll2).toString());
-  }
-
-  @Test
-  void firstListEmpty(){
-    Linkedlist ll = new Linkedlist();
-
-    Linkedlist ll2 = new Linkedlist();
-    ll2.append("10");
-    ll2.append("20");
-    ll2.append("30");
-
-    Linkedlist expectedList = new Linkedlist();
-    expectedList.append("10");
-    expectedList.append("20");
-    expectedList.append("30");
-
-    assertEquals(expectedList.toString(), Linkedlist.zipLists(ll,ll2).toString());
-  }
-
-  @Test
-  void secondListEmpty(){
-    Linkedlist ll = new Linkedlist();
-    ll.append("1");
-    ll.append("2");
-    ll.append("3");
-
-    Linkedlist ll2 = new Linkedlist();
-
-    Linkedlist expectedList = new Linkedlist();
-    expectedList.append("1");
-    expectedList.append("2");
-    expectedList.append("3");
-
-    assertEquals(expectedList.toString(), Linkedlist.zipLists(ll,ll2).toString());
+//  //--------------lab8----------
+//@Test void linkedListZip(){
+//  Linkedlist Link1 = new Linkedlist();
+//     Link1.append("1");
+//     Link1.append("3");
+//     Link1.append("2");
+//     System.out.println(Link1.toString());
+//
+//  Linkedlist Link2 = new Linkedlist();
+//     Link2.append("5");
+//     Link2.append("9");
+//     Link2.append("4");
+//     System.out.println(Link2.toString());
+//
+//  Linkedlist NewL = new Linkedlist();
+//  assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL", NewL.zipLists(Link1,Link2).toString());
+//}
+//
+//  @Test
+//  void bothListsEmpty(){
+//    Linkedlist ll = new Linkedlist();
+//    Linkedlist ll2 = new Linkedlist();
+//    Linkedlist expectedList = new Linkedlist();
+//
+//    assertEquals(expectedList.toString(), Linkedlist.zipLists(ll,ll2).toString());
+//  }
+//
+//  @Test
+//  void firstListEmpty(){
+//    Linkedlist ll = new Linkedlist();
+//
+//    Linkedlist ll2 = new Linkedlist();
+//    ll2.append("10");
+//    ll2.append("20");
+//    ll2.append("30");
+//
+//    Linkedlist expectedList = new Linkedlist();
+//    expectedList.append("10");
+//    expectedList.append("20");
+//    expectedList.append("30");
+//
+//    assertEquals(expectedList.toString(), Linkedlist.zipLists(ll,ll2).toString());
+//  }
+//
+//  @Test
+//  void secondListEmpty(){
+//    Linkedlist ll = new Linkedlist();
+//    ll.append("1");
+//    ll.append("2");
+//    ll.append("3");
+//
+//    Linkedlist ll2 = new Linkedlist();
+//
+//    Linkedlist expectedList = new Linkedlist();
+//    expectedList.append("1");
+//    expectedList.append("2");
+//    expectedList.append("3");
+//
+//    assertEquals(expectedList.toString(), Linkedlist.zipLists(ll,ll2).toString());
+//  }
   }
 }
