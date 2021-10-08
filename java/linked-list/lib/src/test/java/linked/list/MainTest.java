@@ -49,18 +49,18 @@ class MainTest {
   @Test
   void LinkedListIncludes() {
     Linkedlist ll = new Linkedlist();
-   ll.insert("a");
-   ll.insert("b");
-   ll.insert("c");
+    ll.insert("a");
+    ll.insert("b");
+    ll.insert("c");
     assertTrue(ll.includes("b"));
   }
 
   @Test
   void LinkedListDoesntIncludes() {
     Linkedlist ll = new Linkedlist();
-      ll.insert("a");
-      ll.insert("b");
-      ll.insert("c");
+    ll.insert("a");
+    ll.insert("b");
+    ll.insert("c");
 
     assertFalse(ll.includes("g"));
     assertFalse(ll.includes("i"));
@@ -69,9 +69,9 @@ class MainTest {
   @Test
   void includesWorkingFine() {
     Linkedlist ll = new Linkedlist();
-     ll.insert("c");
-     ll.insert("b");
-     ll.insert("a");
+    ll.insert("c");
+    ll.insert("b");
+    ll.insert("a");
 
     String expected = "{ a } -> { b } -> { c } -> NULL";
     assertEquals(expected, ll.toString());
@@ -79,22 +79,23 @@ class MainTest {
 
   //--------------------------------challenge6----------
 
-  @Test void addOneToTheEnd(){
+  @Test
+  void addOneToTheEnd() {
     Linkedlist mylist = new Linkedlist();
 
     mylist.append("tala");
 
     Node current = mylist.head;
     String actual = "";
-    while(current != null){
-      actual +=  "{ " + current.getData() + " } -> ";
+    while (current != null) {
+      actual += "{ " + current.getData() + " } -> ";
       current = current.next;
     }
     actual += "NULL";
 
     String expected = "{ tala } -> NULL";
 
-    assertEquals(expected,actual);
+    assertEquals(expected, actual);
   }
 
   @Test
@@ -123,7 +124,7 @@ class MainTest {
   }
 
   @Test
-  void addBeforeMiddle(){
+  void addBeforeMiddle() {
     Linkedlist ll = new Linkedlist();
     Node n1 = new Node("1");
     Node n2 = new Node("2");
@@ -139,19 +140,20 @@ class MainTest {
 
     Node current = ll.head;
     String actual = "";
-    while(current != null){
-      actual +=  "{ " + current.getData() + " } -> ";
+    while (current != null) {
+      actual += "{ " + current.getData() + " } -> ";
       current = current.next;
     }
     actual += "NULL";
 
     String expected = "{ 1 } -> { 2 } -> { 10 } -> { 3 } -> { 4 } -> NULL";
 
-    assertEquals(expected,actual);
+    assertEquals(expected, actual);
   }
 
-  @Test //This tests if it can add one node or multiple nodes at the end of the linked list:
-  void addBeforeFirst(){
+  @Test
+    //This tests if it can add one node or multiple nodes at the end of the linked list:
+  void addBeforeFirst() {
     Linkedlist ll = new Linkedlist();
     Node n1 = new Node("1");
     Node n2 = new Node("2");
@@ -166,20 +168,20 @@ class MainTest {
 
     Node current = ll.head;
     String actual = "";
-    while(current != null){
-      actual +=  "{ " + current.getData() + " } -> ";
+    while (current != null) {
+      actual += "{ " + current.getData() + " } -> ";
       current = current.next;
     }
     actual += "NULL";
 
     String expected = "{ 10 } -> { 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL";
 
-    assertEquals(expected,actual);
+    assertEquals(expected, actual);
 
   }
 
   @Test
-  void addAfterMiddle(){
+  void addAfterMiddle() {
     Linkedlist ll = new Linkedlist();
     Node n1 = new Node("1");
     Node n2 = new Node("2");
@@ -195,19 +197,19 @@ class MainTest {
 
     Node current = ll.head;
     String actual = "";
-    while(current != null){
-      actual +=  "{ " + current.getData() + " } -> ";
+    while (current != null) {
+      actual += "{ " + current.getData() + " } -> ";
       current = current.next;
     }
     actual += "NULL";
 
     String expected = "{ 1 } -> { 2 } -> { 10 } -> { 3 } -> { 4 } -> NULL";
 
-    assertEquals(expected,actual);
+    assertEquals(expected, actual);
   }
 
   @Test
-  void addAfterLast(){
+  void addAfterLast() {
     Linkedlist ll = new Linkedlist();
     Node n1 = new Node("1");
     Node n2 = new Node("2");
@@ -223,18 +225,19 @@ class MainTest {
 
     Node current = ll.head;
     String actual = "";
-    while(current != null){
-      actual +=  "{ " + current.getData() + " } -> ";
+    while (current != null) {
+      actual += "{ " + current.getData() + " } -> ";
       current = current.next;
     }
     actual += "NULL";
 
     String expected = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 10 } -> NULL";
 
-    assertEquals(expected,actual);
+    assertEquals(expected, actual);
   }
+
   @Test
-  void kInTheMiddle(){
+  void kInTheMiddle() {
     Linkedlist ll = new Linkedlist();
     ll.append("10");
     ll.append("11");
@@ -242,12 +245,66 @@ class MainTest {
     ll.append("13");
 
     String actual = "11";
-    try{
+    try {
       actual = ll.kthFromEnd(2);
-    }catch(Exception e){
+    } catch (Exception e) {
       e.printStackTrace();
 
-    };
+    }
+    ;
     assertEquals("11", actual);
+  }
+
+  @Test
+  void testForOneNodeKth() {
+    Linkedlist ll = new Linkedlist();
+    ll.append("10");
+
+    String actual = "Enter a correct number";
+    actual = ll.kthFromEnd(2);
+    assertEquals("Enter a correct number", actual);
+
+  }
+
+  @Test
+  void testWhenKthHigh() {
+    Linkedlist ll = new Linkedlist();
+    ll.append("10");
+    ll.append("11");
+    ll.append("12");
+    ll.append("13");
+
+
+    String actual = "Enter a correct number";
+    actual = ll.kthFromEnd(5);
+    assertEquals("Enter a correct number", actual);
+
+  }
+  @Test
+  void testWhenKthNegative() {
+    Linkedlist ll = new Linkedlist();
+    ll.append("10");
+    ll.append("11");
+    ll.append("12");
+    ll.append("13");
+
+
+    String actual = "Enter a correct number";
+    actual = ll.kthFromEnd(-2);
+    assertEquals("Enter a correct number", actual);
+
+  } @Test
+  void testWhenKthSametoSize() {
+    Linkedlist ll = new Linkedlist();
+    ll.append("10");
+    ll.append("11");
+    ll.append("12");
+    ll.append("13");
+
+
+    String actual = "Enter a correct number";
+    actual = ll.kthFromEnd(4);
+    assertEquals("Enter a correct number", actual);
+
   }
 }

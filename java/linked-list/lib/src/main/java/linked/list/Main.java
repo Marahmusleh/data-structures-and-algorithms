@@ -21,6 +21,8 @@ public class Main {
     System.out.println(ll2.toString());
     ll2.insertBefore("marah","aya");
     System.out.println(ll2.toString());
-    System.out.println(ll2.kthFromEnd(4));
+    System.out.println(ll2.kthFromEnd(3));
+
+
   }
 }
