@@ -34,7 +34,7 @@ class AppTest {
   }
 
   @Test
-  void popOfTheStack() throws Exception {
+  void popOfTheStack() {
     Stack stack1 = new Stack();
     stack1.push("1");
     stack1.push("2");
@@ -48,7 +48,7 @@ class AppTest {
   }
 
   @Test
-  void popUntilEmptyStack() throws Exception {
+  void popUntilEmptyStack() {
     Stack stack1 = new Stack();
     stack1.push("1");
     stack1.push("2");
@@ -60,7 +60,7 @@ class AppTest {
   }
 
   @Test
-  void peekNextItem() throws Exception {
+  void peekNextItem() {
     Stack stack1 = new Stack();
     stack1.push("1");
     stack1.push("2");
@@ -111,7 +111,7 @@ class AppTest {
   }
 
   @Test
-  void peekQueue() throws Exception {
+  void peekQueue(){
     Queue queue1 = new Queue();
     queue1.enqueue("1");
     queue1.enqueue("2");
@@ -139,11 +139,42 @@ class AppTest {
   }
 
   @Test
-  void testExceptionPeekOrDequeueEmptyQueue() throws Exception {
+  void testExceptionPeekOrDequeueEmptyQueue() {
     Queue queue = new Queue();
 
     assertThrows(EmptyStackException.class, queue::dequeue);
     assertThrows(EmptyStackException.class, queue::peek);
   }
+
+  @Test
+  void testingEnqueuePseudoQueue() {
+    PseudoQueue pseudoQueue = new PseudoQueue();
+    pseudoQueue.enqueue("10");
+    pseudoQueue.enqueue("20");
+    pseudoQueue.enqueue("30");
+    pseudoQueue.enqueue("40");
+
+    assertEquals("PseudoQueue[40]->[30]->[20]->[10]->NULL", pseudoQueue.toString());
+  }
+
+  @Test
+  public void testDequeuePseudoQueue(){
+    PseudoQueue pseudoQueue = new PseudoQueue();
+    pseudoQueue.enqueue("20");
+    pseudoQueue.enqueue("15");
+    pseudoQueue.enqueue("10");
+    pseudoQueue.enqueue("5");
+    pseudoQueue.dequeue();
+
+
+    assertEquals( "[5]->[10]->[15]->NULL",pseudoQueue.toString());
+  }
+  
+ @Test
+ public void testEmptyInputStack(){
+   PseudoQueue pseudoQueue = new PseudoQueue();
+   assertEquals( "empty stack!",pseudoQueue.dequeue());
+
+ }
 
 }

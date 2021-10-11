@@ -22,5 +22,20 @@ public class App {
     System.out.println(queue.peek());
 //    System.out.println(queue.dequeue());
     System.out.println(queue.isEmpty());
+
+
+//
+    PseudoQueue pseudoQueue=new PseudoQueue();
+    pseudoQueue.enqueue("20");
+    pseudoQueue.enqueue("15");
+    pseudoQueue.enqueue("10");
+    pseudoQueue.enqueue("5");
+    System.out.println(pseudoQueue);
+    System.out.println(pseudoQueue.dequeue());
+    System.out.println(pseudoQueue);
+
+
   }
+
+
 }
