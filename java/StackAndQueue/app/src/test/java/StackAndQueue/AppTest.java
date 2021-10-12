@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-  @Test
+ @Test
   void pushOneNodeToStack() {
     Stack stack1 = new Stack();
     stack1.push("1");
@@ -176,5 +176,30 @@ class AppTest {
    assertEquals( "empty stack!",pseudoQueue.dequeue());
 
  }
+
+
+  @Test void AnimalShelterEnqueueDequeue() throws Exception {
+    AnimalShelter animalShelter = new AnimalShelter();
+    Cat cat1 = new Cat("lily");
+    Cat cat2 = new Cat("lucy");
+    Cat cat3 = new Cat("brbr");
+    Dog dog1 = new Dog("coco");
+    Dog dog2 = new Dog("bella");
+
+    animalShelter.enqueue(cat1);
+    animalShelter.enqueue(dog2);
+    animalShelter.enqueue(cat3);
+    animalShelter.enqueue(cat2);
+    animalShelter.enqueue(dog1);
+    // test enqueue
+    assertEquals("AnimalShelter{dogs=Queue{front -> bella -> coco <- back }, cats=Queue{front -> lily -> brbr -> lucy <- back }}", animalShelter.toString());
+    //test dequeue cat
+    animalShelter.dequeue("cat");
+    assertEquals("AnimalShelter{dogs=Queue{front -> bella -> coco <- back }, cats=Queue{front -> brbr -> lucy <- back }}", animalShelter.toString());
+   //test dequeue god
+    animalShelter.dequeue("dog");
+    assertEquals("AnimalShelter{dogs=Queue{front -> coco <- back }, cats=Queue{front -> brbr -> lucy <- back }}", animalShelter.toString());
+
+  }
 
 }

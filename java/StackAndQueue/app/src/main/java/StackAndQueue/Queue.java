@@ -2,7 +2,7 @@ package StackAndQueue;
 
 import java.util.EmptyStackException;
 
-public class Queue {
+public class Queue<D extends Animal> {
   private Node front;
   private Node back;
 
