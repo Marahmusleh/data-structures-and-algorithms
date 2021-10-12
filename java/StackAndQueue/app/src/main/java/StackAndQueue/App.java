@@ -13,7 +13,7 @@ public class App {
 //    System.out.println(stack.pop());
     System.out.println(stack.isEmpty());
 
-    Queue queue = new Queue();
+    Queue<Animal> queue = new Queue<Animal>();
 
     queue.enqueue("1");
     queue.enqueue("2");
@@ -25,7 +25,7 @@ public class App {
 
 
 //
-    PseudoQueue pseudoQueue=new PseudoQueue();
+    PseudoQueue pseudoQueue = new PseudoQueue();
     pseudoQueue.enqueue("20");
     pseudoQueue.enqueue("15");
     pseudoQueue.enqueue("10");
@@ -34,8 +34,26 @@ public class App {
     System.out.println(pseudoQueue.dequeue());
     System.out.println(pseudoQueue);
 
+    AnimalShelter animalShelter = new AnimalShelter();
+    Cat cat1 = new Cat("lily");
+    Cat cat2 = new Cat("lucy");
+    Cat cat3 = new Cat("brbr");
+    Dog dog1 = new Dog("coco");
+    Dog dog2 = new Dog("bella");
+
+    animalShelter.enqueue(cat1);
+    animalShelter.enqueue(dog2);
+    animalShelter.enqueue(cat3);
+    animalShelter.enqueue(cat2);
+    animalShelter.enqueue(dog1);
+
+    System.out.println(animalShelter);
+
+    animalShelter.dequeue("cat");
+    System.out.println(animalShelter);
+
+    animalShelter.dequeue("dog");
+    System.out.println(animalShelter);
 
   }
-
-
 }

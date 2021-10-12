@@ -87,14 +87,14 @@ class AppTest {
 
   @Test
   void canEnqueueOneNodeToQueue() {
-    Queue queue1 = new Queue();
+    Queue<Animal> queue1 = new Queue<Animal>();
     queue1.enqueue("1");
     assertEquals("Queue{front -> 1 <- back }", queue1.toString());
   }
 
   @Test
   void canEnqueueMultiNodeToQueue() {
-    Queue queue1 = new Queue();
+    Queue<Animal> queue1 = new Queue<Animal>();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -103,7 +103,7 @@ class AppTest {
 
   @Test
   void dequeueFromQueue() throws Exception {
-    Queue queue1 = new Queue();
+    Queue<Animal> queue1 = new Queue<Animal>();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -112,7 +112,7 @@ class AppTest {
 
   @Test
   void peekQueue(){
-    Queue queue1 = new Queue();
+    Queue<Animal> queue1 = new Queue<Animal>();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -121,7 +121,7 @@ class AppTest {
 
   @Test
   void emptyQueueAfterDequeue() throws Exception {
-    Queue queue1 = new Queue();
+    Queue<Animal> queue1 = new Queue<Animal>();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -133,14 +133,14 @@ class AppTest {
 
   @Test
   void testInstantiateEmptyQueue() {
-    Queue queue1 = new Queue();
+    Queue<Animal> queue1 = new Queue<Animal>();
 
     assertEquals("Queue is Empty", queue1.toString());
   }
 
   @Test
   void testExceptionPeekOrDequeueEmptyQueue() {
-    Queue queue = new Queue();
+    Queue<Animal> queue = new Queue<Animal>();
 
     assertThrows(EmptyStackException.class, queue::dequeue);
     assertThrows(EmptyStackException.class, queue::peek);
@@ -167,14 +167,36 @@ class AppTest {
     pseudoQueue.dequeue();
 
 
-    assertEquals( "[5]->[10]->[15]->NULL",pseudoQueue.toString());
+    assertEquals( "PseudoQueue[5]->[10]->[15]->NULL",pseudoQueue.toString());
   }
-  
+
  @Test
  public void testEmptyInputStack(){
    PseudoQueue pseudoQueue = new PseudoQueue();
    assertEquals( "empty stack!",pseudoQueue.dequeue());
 
  }
+  @Test void AnimalShelterEnqueueDequeue() throws Exception {
+    AnimalShelter animalShelter = new AnimalShelter();
+    Cat cat1 = new Cat("lily");
+    Cat cat2 = new Cat("lucy");
+    Cat cat3 = new Cat("brbr");
+    Dog dog1 = new Dog("coco");
+    Dog dog2 = new Dog("bella");
 
+    animalShelter.enqueue(cat1);
+    animalShelter.enqueue(dog2);
+    animalShelter.enqueue(cat3);
+    animalShelter.enqueue(cat2);
+    animalShelter.enqueue(dog1);
+    // test enqueue
+    assertEquals("AnimalShelter{dogs=Queue{front -> bella -> coco <- back }, cats=Queue{front -> lily -> brbr -> lucy <- back }}", animalShelter.toString());
+    //test dequeue cat
+    animalShelter.dequeue("cat");
+    assertEquals("AnimalShelter{dogs=Queue{front -> bella -> coco <- back }, cats=Queue{front -> brbr -> lucy <- back }}", animalShelter.toString());
+   //test dequeue god
+    animalShelter.dequeue("dog");
+    assertEquals("AnimalShelter{dogs=Queue{front -> coco <- back }, cats=Queue{front -> brbr -> lucy <- back }}", animalShelter.toString());
+
+  }
 }
