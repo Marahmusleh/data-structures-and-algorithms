@@ -55,5 +55,14 @@ public class App {
     animalShelter.dequeue("dog");
     System.out.println(animalShelter);
 
+
+
+    Balanced balanced = new Balanced();
+
+    System.out.println(balanced.validateBrackets("{"));
+    System.out.println(balanced.validateBrackets("(){}[[]]"));
+    System.out.println(balanced.validateBrackets("()[[Extra Characters]]"));
+    System.out.println(balanced.validateBrackets("{}(){}"));
+
   }
 }

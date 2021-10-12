@@ -202,4 +202,29 @@ class AppTest {
 
   }
 
+  @Test
+  public void validateBracketsTest() {
+
+    Balanced validBracket = new Balanced();
+
+    assertTrue(validBracket.validateBrackets("{}"));
+    assertTrue(validBracket.validateBrackets("{}(){}"));
+    assertTrue(validBracket.validateBrackets("()[[Extra Characters]]"));
+    assertTrue(validBracket.validateBrackets("(){}[[]]"));
+    assertTrue(validBracket.validateBrackets(""));
+  }
+  @Test
+  public void invalidBracketsTest(){
+    Balanced validBracket = new Balanced();
+
+    assertFalse(validBracket.validateBrackets("[({}]"));
+    assertFalse(validBracket.validateBrackets("(]("));
+    assertFalse(validBracket.validateBrackets("{(})"));
+    assertFalse(validBracket.validateBrackets(")"));
+    assertFalse(validBracket.validateBrackets("[}"));
+    assertFalse(validBracket.validateBrackets("["));
+
+
+  }
+
 }
