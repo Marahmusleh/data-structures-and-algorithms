@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 
 public class Stack {
 
-  private Node top;
+   Node top;
 
   public void push(String data){
     Node node = new Node(data);
