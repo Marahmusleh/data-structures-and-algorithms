@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-  @Test
+ @Test
   void pushOneNodeToStack() {
     Stack stack1 = new Stack();
     stack1.push("1");
@@ -34,7 +34,7 @@ class AppTest {
   }
 
   @Test
-  void popOfTheStack() throws Exception {
+  void popOfTheStack() {
     Stack stack1 = new Stack();
     stack1.push("1");
     stack1.push("2");
@@ -48,7 +48,7 @@ class AppTest {
   }
 
   @Test
-  void popUntilEmptyStack() throws Exception {
+  void popUntilEmptyStack() {
     Stack stack1 = new Stack();
     stack1.push("1");
     stack1.push("2");
@@ -60,7 +60,7 @@ class AppTest {
   }
 
   @Test
-  void peekNextItem() throws Exception {
+  void peekNextItem() {
     Stack stack1 = new Stack();
     stack1.push("1");
     stack1.push("2");
@@ -111,7 +111,7 @@ class AppTest {
   }
 
   @Test
-  void peekQueue() throws Exception {
+  void peekQueue(){
     Queue queue1 = new Queue();
     queue1.enqueue("1");
     queue1.enqueue("2");
@@ -139,11 +139,67 @@ class AppTest {
   }
 
   @Test
-  void testExceptionPeekOrDequeueEmptyQueue() throws Exception {
+  void testExceptionPeekOrDequeueEmptyQueue() {
     Queue queue = new Queue();
 
     assertThrows(EmptyStackException.class, queue::dequeue);
     assertThrows(EmptyStackException.class, queue::peek);
+  }
+
+  @Test
+  void testingEnqueuePseudoQueue() {
+    PseudoQueue pseudoQueue = new PseudoQueue();
+    pseudoQueue.enqueue("10");
+    pseudoQueue.enqueue("20");
+    pseudoQueue.enqueue("30");
+    pseudoQueue.enqueue("40");
+
+    assertEquals("PseudoQueue[40]->[30]->[20]->[10]->NULL", pseudoQueue.toString());
+  }
+
+  @Test
+  public void testDequeuePseudoQueue(){
+    PseudoQueue pseudoQueue = new PseudoQueue();
+    pseudoQueue.enqueue("20");
+    pseudoQueue.enqueue("15");
+    pseudoQueue.enqueue("10");
+    pseudoQueue.enqueue("5");
+    pseudoQueue.dequeue();
+
+
+    assertEquals( "PseudoQueue[5]->[10]->[15]->NULL",pseudoQueue.toString());
+  }
+
+ @Test
+ public void testEmptyInputStack(){
+   PseudoQueue pseudoQueue = new PseudoQueue();
+   assertEquals( "empty stack!",pseudoQueue.dequeue());
+
+ }
+
+
+  @Test void AnimalShelterEnqueueDequeue() throws Exception {
+    AnimalShelter animalShelter = new AnimalShelter();
+    Cat cat1 = new Cat("lily");
+    Cat cat2 = new Cat("lucy");
+    Cat cat3 = new Cat("brbr");
+    Dog dog1 = new Dog("coco");
+    Dog dog2 = new Dog("bella");
+
+    animalShelter.enqueue(cat1);
+    animalShelter.enqueue(dog2);
+    animalShelter.enqueue(cat3);
+    animalShelter.enqueue(cat2);
+    animalShelter.enqueue(dog1);
+    // test enqueue
+    assertEquals("AnimalShelter{dogs=Queue{front -> bella -> coco <- back }, cats=Queue{front -> lily -> brbr -> lucy <- back }}", animalShelter.toString());
+    //test dequeue cat
+    animalShelter.dequeue("cat");
+    assertEquals("AnimalShelter{dogs=Queue{front -> bella -> coco <- back }, cats=Queue{front -> brbr -> lucy <- back }}", animalShelter.toString());
+   //test dequeue god
+    animalShelter.dequeue("dog");
+    assertEquals("AnimalShelter{dogs=Queue{front -> coco <- back }, cats=Queue{front -> brbr -> lucy <- back }}", animalShelter.toString());
+
   }
 
 }
