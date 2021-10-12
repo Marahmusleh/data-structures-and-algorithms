@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-  @Test
+ @Test
   void pushOneNodeToStack() {
     Stack stack1 = new Stack();
     stack1.push("1");
@@ -87,14 +87,14 @@ class AppTest {
 
   @Test
   void canEnqueueOneNodeToQueue() {
-    Queue<Animal> queue1 = new Queue<Animal>();
+    Queue queue1 = new Queue();
     queue1.enqueue("1");
     assertEquals("Queue{front -> 1 <- back }", queue1.toString());
   }
 
   @Test
   void canEnqueueMultiNodeToQueue() {
-    Queue<Animal> queue1 = new Queue<Animal>();
+    Queue queue1 = new Queue();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -103,7 +103,7 @@ class AppTest {
 
   @Test
   void dequeueFromQueue() throws Exception {
-    Queue<Animal> queue1 = new Queue<Animal>();
+    Queue queue1 = new Queue();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -112,7 +112,7 @@ class AppTest {
 
   @Test
   void peekQueue(){
-    Queue<Animal> queue1 = new Queue<Animal>();
+    Queue queue1 = new Queue();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -121,7 +121,7 @@ class AppTest {
 
   @Test
   void emptyQueueAfterDequeue() throws Exception {
-    Queue<Animal> queue1 = new Queue<Animal>();
+    Queue queue1 = new Queue();
     queue1.enqueue("1");
     queue1.enqueue("2");
     queue1.enqueue("3");
@@ -133,14 +133,14 @@ class AppTest {
 
   @Test
   void testInstantiateEmptyQueue() {
-    Queue<Animal> queue1 = new Queue<Animal>();
+    Queue queue1 = new Queue();
 
     assertEquals("Queue is Empty", queue1.toString());
   }
 
   @Test
   void testExceptionPeekOrDequeueEmptyQueue() {
-    Queue<Animal> queue = new Queue<Animal>();
+    Queue queue = new Queue();
 
     assertThrows(EmptyStackException.class, queue::dequeue);
     assertThrows(EmptyStackException.class, queue::peek);
@@ -176,6 +176,8 @@ class AppTest {
    assertEquals( "empty stack!",pseudoQueue.dequeue());
 
  }
+
+
   @Test void AnimalShelterEnqueueDequeue() throws Exception {
     AnimalShelter animalShelter = new AnimalShelter();
     Cat cat1 = new Cat("lily");
@@ -199,4 +201,5 @@ class AppTest {
     assertEquals("AnimalShelter{dogs=Queue{front -> coco <- back }, cats=Queue{front -> brbr -> lucy <- back }}", animalShelter.toString());
 
   }
+
 }

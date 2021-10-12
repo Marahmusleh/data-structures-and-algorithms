@@ -30,6 +30,23 @@ All The methods with complexity O(1)
 * pop : method delete the top on the stack and return its value
 * deQueue : method to delete the front of the Queue and return its value.
 
+## Challenge 11
+
+## Description of the challenge
+
+Implement a Queue using two Stacks. 
+
+<img src="./challenge11.png">
+
+## Approach & Efficiency
+enqueueu: Time O(1), Space(n).
+dequeue: Time O(n), Space(n).
+
+## API
+
+enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach. dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+
 ## Challenge 12
 
 Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
