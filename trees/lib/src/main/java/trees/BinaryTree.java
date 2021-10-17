@@ -52,5 +52,20 @@ public class BinaryTree<T> {
   public Node<T> getRoot() {
     return root;
   }
+
+
+  public int findMaxNumber(Node<Integer> root) {
+      if(root == null) return 0;
+      int max = root.getValue();
+      int leftNode = findMaxNumber(root.getLeftNode());
+      int rightNode = findMaxNumber(root.getRightNode());
+
+      if (leftNode > max) max = leftNode;
+      if (rightNode > max) max = rightNode;
+
+    return max;
+  }
+
+
 }
 

@@ -21,7 +21,7 @@ class LibraryTest {
   void testTreeWithSingleRoot() {
     BinarySearchTree<Integer> tree = new BinarySearchTree<>();
     tree.add(2);
-    assertEquals(2,tree.getRoot().getValue());
+    assertEquals(2, tree.getRoot().getValue());
   }
 
   @Test
@@ -30,10 +30,11 @@ class LibraryTest {
     tree.add(10);
     tree.add(5);
     tree.add(30);
-    assertEquals(10,tree.getRoot().getValue());
-    assertEquals(5,tree.getRoot().getLeftNode().getValue());
-    assertEquals(30,tree.getRoot().getRightNode().getValue());
+    assertEquals(10, tree.getRoot().getValue());
+    assertEquals(5, tree.getRoot().getLeftNode().getValue());
+    assertEquals(30, tree.getRoot().getRightNode().getValue());
   }
+
   @Test
   void testTreePreOrder() {
     BinarySearchTree<Integer> searchTree = new BinarySearchTree<>();
@@ -44,8 +45,8 @@ class LibraryTest {
     searchTree.add(20);
     searchTree.add(55);
     searchTree.add(70);
-    List list = Arrays.asList(50,10,5,20,60,55,70);
-    assertEquals(list,searchTree.preOrder(searchTree.getRoot()));
+    List list = Arrays.asList(50, 10, 5, 20, 60, 55, 70);
+    assertEquals(list, searchTree.preOrder(searchTree.getRoot()));
   }
 
   @Test
@@ -58,8 +59,8 @@ class LibraryTest {
     searchTree.add(20);
     searchTree.add(55);
     searchTree.add(70);
-    List list = Arrays.asList(5,10,20,50,55,60,70);
-    assertEquals(list,searchTree.inOrder(searchTree.getRoot()));
+    List list = Arrays.asList(5, 10, 20, 50, 55, 60, 70);
+    assertEquals(list, searchTree.inOrder(searchTree.getRoot()));
   }
 
   @Test
@@ -72,8 +73,32 @@ class LibraryTest {
     searchTree.add(20);
     searchTree.add(55);
     searchTree.add(70);
-    List list = Arrays.asList(5,20,10,55,70,60,50);
-    assertEquals(list,searchTree.postOrder(searchTree.getRoot()));
+    List list = Arrays.asList(5, 20, 10, 55, 70, 60, 50);
+    assertEquals(list, searchTree.postOrder(searchTree.getRoot()));
   }
+
+  //challenge 16
+
+  @Test
+  void maximumInTree() {
+
+      BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+      bst.add(10);
+      bst.add(5);
+      bst.add(20);
+      bst.add(50);
+      bst.add(1);
+
+      assertEquals(50, bst.findMaxNumber(bst.getRoot()));
+
     }
+    @Test
+  void maxInEmptyTree() {
+      BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+      assertEquals(0,bst.findMaxNumber(bst.getRoot()));
+
+    }
+
+  }
+
 
