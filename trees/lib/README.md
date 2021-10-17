@@ -17,6 +17,17 @@ Create a Binary Search Tree class with (add,contains)methods.
 * In-order: left >> root >> right
 * Post-order: left >> right >> root
 
+## Challenge 16
+Find the maximum value stored in the tree.
+
+<img src="../challenge16.png">
+
+
+### Approach & Efficiency
+the approach that I've used is the recursion function With complexity : time > O(n) , space > O(1)
+
+
+
 
 
 

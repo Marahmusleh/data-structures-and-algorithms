@@ -18,6 +18,7 @@ public class Library {
 //    System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
     System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
     System.out.println(binarySearchTree.contains(70));
+    System.out.println(binarySearchTree.findMaxNumber(binarySearchTree.getRoot()));
   }
   }
 
