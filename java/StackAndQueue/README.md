@@ -66,6 +66,14 @@ enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat
 dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
 
 
+## Challenge 13
 
+The valid parentheses problem involves checking that all the parentheses are matched, every opening parenthesis has a corresponding closing parenthesis.
+
+<img src="./challenge13.png">
+
+## Approach & Efficiency
+Time :0(n)
+Space:0(n)
 
 
