@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="trees.LibraryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-10-17T16:57:47" hostname="LTUCSTUDENT-L121" time="0.067">
+  <properties/>
+  <testcase name="testTreeWithChildParent()" classname="trees.LibraryTest" time="0.051"/>
+  <testcase name="testTreePreOrder()" classname="trees.LibraryTest" time="0.002"/>
+  <testcase name="maxInEmptyTree()" classname="trees.LibraryTest" time="0.001"/>
+  <testcase name="testEmptyTree()" classname="trees.LibraryTest" time="0.001"/>
+  <testcase name="testTreePostOrder()" classname="trees.LibraryTest" time="0.001"/>
+  <testcase name="maximumInTree()" classname="trees.LibraryTest" time="0.001"/>
+  <testcase name="testTreeWithSingleRoot()" classname="trees.LibraryTest" time="0.002"/>
+  <testcase name="testTreeInOrder()" classname="trees.LibraryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

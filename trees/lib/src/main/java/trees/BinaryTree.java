@@ -3,25 +3,27 @@ package trees;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTree<T> {
+public class BinaryTree<T extends Comparable<T>> {
   private Node<T> root;
   private List<T> depthList = new ArrayList<>();
 
 
-  public List<T> inOrder(Node<T> root){
+  public List<T> inOrder(Node<T> root) {
     try {
-    if(root.getLeftNode() != null ){
-      inOrder(root.getLeftNode());
-    }
-    depthList.add(root.getValue());
-    if (root.getRightNode() != null){
-      inOrder(root.getRightNode());
-    }}catch (Exception exception){
+      if (root.getLeftNode() != null) {
+        inOrder(root.getLeftNode());
+      }
+      depthList.add(root.getValue());
+      if (root.getRightNode() != null) {
+        inOrder(root.getRightNode());
+      }
+    } catch (Exception exception) {
       System.out.println("Unexpected Error");
     }
     return depthList;
   }
-  public List<T> preOrder(Node<T> root){
+
+  public List<T> preOrder(Node<T> root) {
     try {
       depthList.add(root.getValue());
       if (root.getLeftNode() != null) {
@@ -29,25 +31,27 @@ public class BinaryTree<T> {
       }
       if (root.getRightNode() != null) {
         preOrder(root.getRightNode());
-      }}catch(Exception error){
-        System.out.println("Unexpected Error");
       }
-      return depthList;
+    } catch (Exception error) {
+      System.out.println("Unexpected Error");
     }
-  public List<T> postOrder(Node<T> root){
-    try {
-    if (root.getLeftNode() != null){
-      postOrder(root.getLeftNode());
-    }
-    if(root.getRightNode() != null){
-      postOrder(root.getRightNode());
-    }
-    depthList.add(root.getValue());
-  }catch(Exception exception){
-    System.out.println("Unexpected Error");
+    return depthList;
   }
-      return depthList;
-}
+
+  public List<T> postOrder(Node<T> root) {
+    try {
+      if (root.getLeftNode() != null) {
+        postOrder(root.getLeftNode());
+      }
+      if (root.getRightNode() != null) {
+        postOrder(root.getRightNode());
+      }
+      depthList.add(root.getValue());
+    } catch (Exception exception) {
+      System.out.println("Unexpected Error");
+    }
+    return depthList;
+  }
 
   public Node<T> getRoot() {
     return root;
@@ -55,17 +59,34 @@ public class BinaryTree<T> {
 
 
   public int findMaxNumber(Node<Integer> root) {
-      if(root == null) return 0;
-      int max = root.getValue();
-      int leftNode = findMaxNumber(root.getLeftNode());
-      int rightNode = findMaxNumber(root.getRightNode());
+    if (root == null) return 0;
+    int max = root.getValue();
+    int leftNode = findMaxNumber(root.getLeftNode());
+    int rightNode = findMaxNumber(root.getRightNode());
 
-      if (leftNode > max) max = leftNode;
-      if (rightNode > max) max = rightNode;
+    if (leftNode > max) max = leftNode;
+    if (rightNode > max) max = rightNode;
 
     return max;
   }
 
+  public List<T> breadthFirst(BinarySearchTree<T> tree) throws Exception {
+    List<T> breadthList = new ArrayList<>();
+    Queue<Node> breadth = new Queue<>();
+    breadth.enqueue(tree.getRoot());
 
+    while (!breadth.isEmpty()) {
+      Node front = breadth.dequeue();
+      breadthList.add((T) front.getValue());
+
+      if (front.getLeftNode() != null)
+        breadth.enqueue(front.getLeftNode());
+      if (front.getRightNode() != null)
+        breadth.enqueue(front.getRightNode());
+    }
+    return breadthList;
+  }
 }
+
+
 

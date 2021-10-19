@@ -20,14 +20,21 @@ Create a Binary Search Tree class with (add,contains)methods.
 ## Challenge 16
 Find the maximum value stored in the tree.
 
-<img src="../challenge16.png">
+<img src="./challenge16.png">
 
 
 ### Approach & Efficiency
 the approach that I've used is the recursion function With complexity : time > O(n) , space > O(1)
 
 
+## Challenge 17
+
+Traverse the input tree using a Breadth-first approach.
+
+<img src="./challeng17.png">
 
 
+### Approach & Efficiency
+the approach that I've used is Queue o traverse the width/breadth of the tree With complexity : time > O(n) , space > O(n)
 
 
