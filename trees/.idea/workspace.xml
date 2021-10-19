@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1c011ac-a03d-4c6d-b2d2-34436873e1aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/NodeQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lib/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/test/java/trees/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/trees/LibraryTest.java" afterDir="false" />
@@ -26,6 +27,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -75,8 +79,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="Gradle.LibraryTest">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\marah\401projects\data-structures-and-algorithms\trees" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.LibraryTest.breadthFirst">
+    <configuration name="Library" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11 (WSL) (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="trees.Library" />
       <module name="trees.lib.main" />
       <method v="2">
@@ -89,6 +100,48 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;trees.LibraryTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibraryTest.breadthFirst" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;trees.LibraryTest.breadthFirst&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibraryTest.breadthFirstException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;trees.LibraryTest.breadthFirstException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -147,13 +200,17 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Library" />
       <item itemvalue="Gradle.LibraryTest" />
       <item itemvalue="Gradle.LibraryTest.maximumInTree" />
       <item itemvalue="Gradle.LibraryTest.maxInEmptyTree" />
+      <item itemvalue="Gradle.LibraryTest.breadthFirstException" />
+      <item itemvalue="Gradle.LibraryTest.breadthFirst" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LibraryTest.breadthFirst" />
+        <item itemvalue="Gradle.LibraryTest.breadthFirstException" />
         <item itemvalue="Gradle.LibraryTest" />
         <item itemvalue="Gradle.LibraryTest.maxInEmptyTree" />
         <item itemvalue="Gradle.LibraryTest.maximumInTree" />
@@ -172,7 +229,8 @@
       <workItem from="1634284839410" duration="16169000" />
       <workItem from="1634321634782" duration="4597000" />
       <workItem from="1634470982025" duration="1123000" />
-      <workItem from="1634479704251" duration="9106000" />
+      <workItem from="1634479704251" duration="9704000" />
+      <workItem from="1634657595876" duration="8926000" />
     </task>
     <servers />
   </component>

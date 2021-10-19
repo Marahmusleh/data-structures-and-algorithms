@@ -6,6 +6,7 @@ package trees;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -97,6 +98,27 @@ class LibraryTest {
       BinarySearchTree<Integer> bst = new BinarySearchTree<>();
       assertEquals(0,bst.findMaxNumber(bst.getRoot()));
 
+    }
+    //challenge 17
+    @Test
+  void breadthFirst() throws Exception {
+      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+      tree.add(20);
+      tree.add(10);
+      tree.add(30);
+      tree.add(5);
+      tree.add(15);
+      tree.add(40);
+      tree.add(25);
+      List breadthList = Arrays.asList(20, 10, 30, 5, 15, 25, 40);
+
+      assertEquals(breadthList,tree.breadthFirst(tree));
+    }
+
+    @Test
+  void breadthFirstException(){
+      trees.Queue<Node> breadth = new Queue<>();
+      assertThrows(EmptyStackException.class ,breadth::dequeue);
     }
 
   }
