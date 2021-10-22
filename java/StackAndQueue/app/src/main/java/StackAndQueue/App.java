@@ -59,10 +59,18 @@ public class App {
 
     Balanced balanced = new Balanced();
 
-    System.out.println(balanced.validateBrackets("{"));
+    System.out.println(balanced.validateBrackets("{)[]{]"));
     System.out.println(balanced.validateBrackets("(){}[[]]"));
     System.out.println(balanced.validateBrackets("()[[Extra Characters]]"));
     System.out.println(balanced.validateBrackets("{}(){}"));
+    System.out.println(balanced.validateBrackets("{}"));
+    System.out.println(balanced.validateBrackets("{}{Code}[Fellows](())"));
+    System.out.println(balanced.validateBrackets("[({}]"));
+    System.out.println(balanced.validateBrackets("(]("));
+    System.out.println(balanced.validateBrackets("{(})"));
+
+
+
 
   }
 }

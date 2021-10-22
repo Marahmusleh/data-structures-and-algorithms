@@ -37,4 +37,18 @@ Traverse the input tree using a Breadth-first approach.
 ### Approach & Efficiency
 the approach that I've used is Queue o traverse the width/breadth of the tree With complexity : time > O(n) , space > O(n)
 
+## Challenge 18
 
+Write a function called fizz buzz tree. take arguments: k-ary tree and return: new k-ary tree Create a new tree with the same structure as the original, but the values modified as follows:
+
+If the value is divisible by 3, replace the value with “Fizz”.
+If the value is divisible by 5, replace the value with “Buzz”.
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”.
+If the value is not divisible by 3 or 5, simply turn the number into a String.
+## API
+fizzBuzzTree(): a method that accept a tree as input and return new modified tree as mentioned above
+
+<img src="./Limnu_20211023.png">
+
+### Approach & Efficiency
+ time > O(n) , space > O(n)
