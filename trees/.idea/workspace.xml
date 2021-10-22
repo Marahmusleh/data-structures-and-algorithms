@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1c011ac-a03d-4c6d-b2d2-34436873e1aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/NodeQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/KaryTree/FizzBuzzTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/KaryTree/KTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/KaryTree/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/StackAndQueue/app/src/main/java/StackAndQueue/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/StackAndQueue/app/src/main/java/StackAndQueue/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/test/java/trees/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/trees/LibraryTest.java" afterDir="false" />
     </list>
@@ -84,7 +83,7 @@
       <recent name="\\wsl$\Ubuntu\home\marah\401projects\data-structures-and-algorithms\trees" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LibraryTest.breadthFirst">
+  <component name="RunManager" selected="Gradle.LibraryTest.testTreeEmptyFizzBuzz">
     <configuration name="Library" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11 (WSL) (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -157,12 +156,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LibraryTest.maxInEmptyTree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest.testFizzBuzz" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trees.LibraryTest.maxInEmptyTree&quot;" />
+        <option name="scriptParameters" value="--tests &quot;trees.LibraryTest.testFizzBuzz&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -178,12 +177,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LibraryTest.maximumInTree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest.testTreeEmptyFizzBuzz" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trees.LibraryTest.maximumInTree&quot;" />
+        <option name="scriptParameters" value="--tests &quot;trees.LibraryTest.testTreeEmptyFizzBuzz&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -202,18 +201,18 @@
     <list>
       <item itemvalue="Application.Library" />
       <item itemvalue="Gradle.LibraryTest" />
-      <item itemvalue="Gradle.LibraryTest.maximumInTree" />
-      <item itemvalue="Gradle.LibraryTest.maxInEmptyTree" />
       <item itemvalue="Gradle.LibraryTest.breadthFirstException" />
       <item itemvalue="Gradle.LibraryTest.breadthFirst" />
+      <item itemvalue="Gradle.LibraryTest.testFizzBuzz" />
+      <item itemvalue="Gradle.LibraryTest.testTreeEmptyFizzBuzz" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LibraryTest.testTreeEmptyFizzBuzz" />
+        <item itemvalue="Gradle.LibraryTest.testFizzBuzz" />
         <item itemvalue="Gradle.LibraryTest.breadthFirst" />
         <item itemvalue="Gradle.LibraryTest.breadthFirstException" />
         <item itemvalue="Gradle.LibraryTest" />
-        <item itemvalue="Gradle.LibraryTest.maxInEmptyTree" />
-        <item itemvalue="Gradle.LibraryTest.maximumInTree" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +229,9 @@
       <workItem from="1634321634782" duration="4597000" />
       <workItem from="1634470982025" duration="1123000" />
       <workItem from="1634479704251" duration="9704000" />
-      <workItem from="1634657595876" duration="8926000" />
+      <workItem from="1634657595876" duration="9922000" />
+      <workItem from="1634903418670" duration="9446000" />
+      <workItem from="1634934962439" duration="1909000" />
     </task>
     <servers />
   </component>

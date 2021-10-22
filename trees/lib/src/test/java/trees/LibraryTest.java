@@ -4,7 +4,11 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
+import trees.KaryTree.FizzBuzzTree;
+import trees.KaryTree.KTreeNode;
+import trees.KaryTree.Tree;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.List;
@@ -83,44 +87,65 @@ class LibraryTest {
   @Test
   void maximumInTree() {
 
-      BinarySearchTree<Integer> bst = new BinarySearchTree<>();
-      bst.add(10);
-      bst.add(5);
-      bst.add(20);
-      bst.add(50);
-      bst.add(1);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+    bst.add(10);
+    bst.add(5);
+    bst.add(20);
+    bst.add(50);
+    bst.add(1);
 
-      assertEquals(50, bst.findMaxNumber(bst.getRoot()));
-
-    }
-    @Test
-  void maxInEmptyTree() {
-      BinarySearchTree<Integer> bst = new BinarySearchTree<>();
-      assertEquals(0,bst.findMaxNumber(bst.getRoot()));
-
-    }
-    //challenge 17
-    @Test
-  void breadthFirst() throws Exception {
-      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-      tree.add(20);
-      tree.add(10);
-      tree.add(30);
-      tree.add(5);
-      tree.add(15);
-      tree.add(40);
-      tree.add(25);
-      List breadthList = Arrays.asList(20, 10, 30, 5, 15, 25, 40);
-
-      assertEquals(breadthList,tree.breadthFirst(tree));
-    }
-
-    @Test
-  void breadthFirstException(){
-      trees.Queue<Node> breadth = new Queue<>();
-      assertThrows(EmptyStackException.class ,breadth::dequeue);
-    }
+    assertEquals(50, bst.findMaxNumber(bst.getRoot()));
 
   }
+
+  @Test
+  void maxInEmptyTree() {
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+    assertEquals(0, bst.findMaxNumber(bst.getRoot()));
+
+  }
+
+  //challenge 17
+  @Test
+  void breadthFirst() throws Exception {
+    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+    tree.add(20);
+    tree.add(10);
+    tree.add(30);
+    tree.add(5);
+    tree.add(15);
+    tree.add(40);
+    tree.add(25);
+    List breadthList = Arrays.asList(20, 10, 30, 5, 15, 25, 40);
+
+    assertEquals(breadthList, tree.breadthFirst(tree));
+  }
+
+  @Test
+  void breadthFirstException() {
+    trees.Queue<Node> breadth = new Queue<>();
+    assertThrows(EmptyStackException.class, breadth::dequeue);
+  }
+
+  @Test
+  void testFizzBuzz() {
+
+    Tree tree = new Tree();
+    ArrayList<KTreeNode> arrayList = new ArrayList<>();
+    tree.setRoot(new KTreeNode(1));
+    arrayList.add(new KTreeNode(5));
+    arrayList.add(new KTreeNode(6));
+    arrayList.add(new KTreeNode(15));
+    tree.getRoot().setChildren(arrayList);
+
+    assertEquals("Tree{root=KTreeNode{children=[KTreeNode{children=[], value=Buzz}, KTreeNode{children=[], value=Fizz}, KTreeNode{children=[], value=FizzBuzz}], value=1}}", FizzBuzzTree.fizzBuzzTree(tree).toString());
+  }
+
+  @Test
+  void testTreeEmptyFizzBuzz() {
+    Tree tree2 = new Tree();
+    assertNull(tree2.getRoot());
+  }
+}
 
 
