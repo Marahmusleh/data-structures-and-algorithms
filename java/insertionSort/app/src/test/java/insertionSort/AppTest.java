@@ -23,5 +23,11 @@ class AppTest {
 
     assertEquals(Arrays.toString(expected), Arrays.toString(App.insertionSort(arr)));
   }
+  @Test void mergeSort() {
+    int[] arr = {8, 4, 23, 42, 16, 15};
+    int[] expected =  {4, 8, 15, 16, 23, 42};
+
+    assertEquals(Arrays.toString(expected), Arrays.toString(App.mergeSort(arr)));
+  }
     }
 
