@@ -29,3 +29,22 @@ Merge sort is a “divide and conquer” algorithm wherein we first divide the p
 ### Efficency
 * Time: O(n)
 * Space: O(n)
+
+## Challenge 28
+
+Quicksort is a sorting algorithm, which is leveraging the divide-and-conquer principle.The input list is divided into two sub-lists by an element called pivot; one sub-list with elements less than the pivot and another one with elements greater than the pivot. This process repeats for each sub-list.
+
+### Traces
+
+
+<img src="./Limnu_20211102.png">
+
+### Visiual:
+
+<img src="./quickSort.jpg">
+
+
+
+### Efficency
+* Time: O(nLog(n))
+* Space: O(1)
