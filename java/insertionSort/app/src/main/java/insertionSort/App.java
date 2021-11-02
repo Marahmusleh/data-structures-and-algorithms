@@ -35,7 +35,7 @@ public class App {
   }
 
 
-
+//lab27
   public static int[] mergeSort(int[] arr) {
     int n = arr.length;
     if (n > 1) {
@@ -75,6 +75,49 @@ public class App {
     while (j < right.length) {
       arr[k++] = right[j++];
     }
+  }
+
+  // lab28
+
+  public static int[] quickSort(int[] arr, int start, int end) {
+    if (start < end) {
+      int position = partition(arr, start, end);
+
+      quickSort(arr, start, position - 1);
+      quickSort(arr, position + 1, end);
+    }
+    return arr;
+  }
+
+
+  public static int partition(int[] arr, int left, int right)
+  {
+
+    int pivot = arr[right];
+
+    int low = (left - 1);
+
+    for(int j = left; j <= right - 1; j++)
+    {
+
+      if (arr[j] <= pivot)
+      {
+        low++;
+        swap(arr, low, j);
+      }
+    }
+    swap(arr, low + 1, right);
+
+    return (low + 1);
+  }
+
+
+
+  public static void swap(int[] arr, int i, int low)
+  {
+    int temp = arr[i];
+    arr[i] = arr[low];
+    arr[low] = temp;
   }
 
 }
