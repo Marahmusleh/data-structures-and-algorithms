@@ -24,10 +24,12 @@ Merge sort is a “divide and conquer” algorithm wherein we first divide the p
 *pass3: the merge processes come into action and start merging arrays back while sorting.
 
 <img src="./challenge27.png">
-<img src="./Limnu_20211101.png">
+<img src="./mergeSort2.png">
+
+#### *Note in the Algorithm a very small adjustment for the first step "The base condition checks if the array length is greater than 1", not is equal to 1.
 
 ### Efficency
-* Time: O(n)
+* Time: O(n log n)
 * Space: O(n)
 
 ## Challenge 28
