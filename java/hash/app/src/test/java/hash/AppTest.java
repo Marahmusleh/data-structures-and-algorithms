@@ -11,4 +11,21 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+  @Test
+  void testHashTable() {
+    HashTable<String> hashTable = new HashTable<>(10);
+    hashTable.add(11,"marah");
+    hashTable.add(12,"sara");
+    hashTable.add(13,"mais");
+    hashTable.add(13,"sabeel");
+//Retrieving based on a key returns the value stored
+    assertEquals("sara", hashTable.get(12));
+    assertTrue(hashTable.contains(11));
+    //Successfully returns null for a key that does not exist in the hashtable
+    assertFalse(hashTable.contains(5));
+    assertNull(hashTable.get(1));
+    //Successfully hash a key to an in-range value
+    assertEquals(0,hashTable.getHash(20));
+
+  }
 }
