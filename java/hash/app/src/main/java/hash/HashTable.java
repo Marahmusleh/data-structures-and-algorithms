@@ -1,57 +1,64 @@
 package hash;
 
-import java.util.Arrays;
-
 public class HashTable<T> {
   Node[] arrayHash;
   int size;
 
   public HashTable(int size) {
     this.size = size;
-    arrayHash = new Node[size]; // initialize the array with a node take the size,its the first node
+    arrayHash = new Node[size];
     for (int i = 0; i < size; i++) {
-      arrayHash[i] = new Node(); // then we will initialize the rest of nodes inside this array which is inside the big node
+      arrayHash[i] = new Node();
     }
   }
-// generate the hash which is in many ways
-  public int getHash(int key) {
-    return key % size;
+  public int getHash(Object key) {
+    if(key.getClass().getSimpleName().equals("String")){
+      return Math.abs(key.hashCode()%size);
+    }else{
+      return (Integer) key % size;
+    }
   }
 
-  public void add(int key, Object value){
+  public void add(Object key, Object value){
+    Node newItem = new Node(key,value);
     int hashIndex = getHash(key);
-    Node arrValue = arrayHash[hashIndex]; //linked list
-    Node newItem = new Node(key,value); // every index may have multi elements
 
-    newItem.next = arrValue.next;
-    arrValue.next = newItem;
+    if(arrayHash[hashIndex].key == null){
+      arrayHash[hashIndex] = newItem;
+    }else{
+      newItem.next = arrayHash[hashIndex].next;
+      arrayHash[hashIndex].next = newItem;
+    }
   }
 
-  public T get(int key){
-    T value = null;
+  public T get(Object key){
+    T output = null;
 
     int hashIndex = getHash(key);
     Node arrValue = arrayHash[hashIndex];
 
     while (arrValue != null){
       if(arrValue.key == key){
-        value = (T) arrValue.value;
+        output = (T) arrValue.value;
         break;
       }
       arrValue=arrValue.next;
     }
-    return value;
+    return output;
   }
 
-  public boolean contains(int key){
+  public boolean contains(Object key){
     boolean output = false;
 
     int hashIndex = getHash(key);
     Node arrValue = arrayHash[hashIndex];
 
-    while (arrValue != null){
-      if(arrValue.key == key){
+    while (arrValue.key != null){
+      if(arrValue.key.equals(key)){
         output = true;
+        break;
+      }
+      if(arrValue.next == null){
         break;
       }
       arrValue=arrValue.next;
@@ -59,4 +66,3 @@ public class HashTable<T> {
     return output;
   }
 }
-

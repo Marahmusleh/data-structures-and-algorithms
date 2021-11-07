@@ -32,3 +32,16 @@ HashTable(size): generate hash by the key and return hash with the key
 get(key): return the value for the key.
 hash(key): return the index of the key.
 contains(key): check if the key exist in the hash table.
+
+### Challenge 31
+
+Write a function called repeated word that finds the first word to occur more than once in a string
+* Arguments: string
+* Return: string
+
+![img](./Limnu_20211107.png)
+
+### Approach & Efficiency
+Time : o(n) 
+Space:o(n)
+
