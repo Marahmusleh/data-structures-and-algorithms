@@ -4,6 +4,10 @@
 package hash;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -42,5 +46,37 @@ class AppTest {
     assertEquals("a", RepeatedWord.repeatedWord(input1));
     assertEquals("it", RepeatedWord.repeatedWord(input2));
     assertEquals("summer", RepeatedWord.repeatedWord(input3));
+  }
+
+  @Test
+  void testHashTable3(){
+    BinaryTree<Integer> tree1 = new BinaryTree<>();
+    tree1.root = new TreeNode<Integer>(150);
+    tree1.root.left = new TreeNode<Integer>(100);
+    tree1.root.right = new TreeNode<Integer>(250);
+    tree1.root.left.left = new TreeNode<Integer>(75);
+    tree1.root.left.right = new TreeNode<Integer>(160);
+    tree1.root.left.right.left = new TreeNode<Integer>(125);
+    tree1.root.left.right.right = new TreeNode<Integer>(175);
+    tree1.root.right.left = new TreeNode<Integer>(200);
+    tree1.root.right.right = new TreeNode<Integer>(350);
+    tree1.root.right.right.left = new TreeNode<Integer>(300);
+    tree1.root.right.right.right = new TreeNode<Integer>(500);
+
+    BinaryTree<Integer> tree2 = new BinaryTree<>();
+    tree2.root = new TreeNode<Integer>(42);
+    tree2.root.left = new TreeNode<Integer>(100);
+    tree2.root.right = new TreeNode<Integer>(600);
+    tree2.root.left.left = new TreeNode<Integer>(15);
+    tree2.root.left.right = new TreeNode<Integer>(160);
+    tree2.root.left.right.left = new TreeNode<Integer>(125);
+    tree2.root.left.right.right = new TreeNode<Integer>(175);
+    tree2.root.right.left = new TreeNode<Integer>(200);
+    tree2.root.right.right = new TreeNode<Integer>(350);
+    tree2.root.right.right.left = new TreeNode<Integer>(4);
+    tree2.root.right.right.right = new TreeNode<Integer>(500);
+
+
+    assertEquals( Arrays.asList(100, 125, 160, 175, 200, 350, 500),App.treeIntersection(tree1,tree2));
   }
 }

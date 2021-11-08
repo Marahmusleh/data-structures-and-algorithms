@@ -45,3 +45,17 @@ Write a function called repeated word that finds the first word to occur more th
 Time : o(n) 
 Space:o(n)
 
+### Challenge 32
+
+### find a set of values found in both trees.
+
+![img](./Limnu_20211108.png)
+
+### API
+
+* treeTintersection: takes two binary trees as parameters,
+Using Hashmap implementation ,return a set of values found in both trees.
+
+### Approach & Efficiency
+Time : o(n) 
+Space:o(n)
