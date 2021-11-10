@@ -5,7 +5,9 @@ package hash;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -78,5 +80,32 @@ class AppTest {
 
 
     assertEquals( Arrays.asList(100, 125, 160, 175, 200, 350, 500),App.treeIntersection(tree1,tree2));
+  }
+
+
+  @Test void leftJoinTest() {
+    HashMap<String, String> hashMap = new HashMap<String, String>();
+    hashMap.put("fond", "enamored");
+    hashMap.put("wrath", "anger");
+    hashMap.put("diligent", "employed");
+    hashMap.put("outfit", "garb");
+    hashMap.put("guide", "usher");
+
+
+    HashMap<String, String> hashMap2 = new HashMap<String, String>();
+    hashMap2.put("fond", "averse");
+    hashMap2.put("wrath", "diligent");
+    hashMap2.put("diligent", "idle");
+    hashMap2.put("guide", "follow");
+    hashMap2.put("flow", "jam");
+
+    assertEquals("[\n" +
+      "[diligent, employed, idle], \n" +
+      "[outfit, garb, null], \n" +
+      "[wrath, anger, diligent], \n" +
+      "[guide, usher, follow], \n" +
+      "[fond, enamored, averse]]", App.leftJoin(hashMap, hashMap2).toString());
+
+
   }
 }
