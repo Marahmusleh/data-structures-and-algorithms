@@ -5,6 +5,7 @@ package hash;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class App {
@@ -34,6 +35,18 @@ public class App {
       }
     }
     return output;
+  }
+
+  public static List<Object> leftJoin(HashMap hashMap1, HashMap hashMap2){
+    List<Object> list = new ArrayList<>();
+    for(Object obj: hashMap1.keySet()){
+      if(hashMap1.containsKey(obj)){
+        list.add("\n" + "["  + obj + ", " + hashMap1.get(obj) + ", " + hashMap2.get(obj) + "]");
+      }else{
+        list.add(obj + ", " + hashMap1.get(obj) + ", " + null);
+      }
+    }
+    return list;
   }
 }
 

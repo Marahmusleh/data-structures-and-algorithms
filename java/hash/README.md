@@ -59,3 +59,16 @@ Using Hashmap implementation ,return a set of values found in both trees.
 ### Approach & Efficiency
 Time : o(n) 
 Space:o(n)
+
+### Challenge 33
+
+Left Join
+Implement a simplified LEFT JOIN for 2 Hashmaps.
+
+
+![img](./Limnu_20211110.png)
+
+Approach & Efficiency
+
+Time	Space
+O(m+n)	O(n)
