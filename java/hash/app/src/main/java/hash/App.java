@@ -3,10 +3,7 @@
  */
 package hash;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class App {
 
@@ -15,6 +12,7 @@ public class App {
 
     String input ="Once upon a time, there was a brave princess who...";
     System.out.println(RepeatedWord.repeatedWord(input));
+    System.out.println(isUnique("Python"));
   }
 
   public static List<Integer> treeIntersection(BinaryTree<Integer> binaryTree1, BinaryTree<Integer> binaryTree2) {
@@ -48,5 +46,19 @@ public class App {
     }
     return list;
   }
+
+  public static boolean isUnique(String input) { // Create a Set to insert characters
+     Set<Character> set = new HashSet<>();
+     char[] characters = input.toCharArray();
+     for (Character c : characters) {
+       if (!set.add(c))
+      return false;
+     }
+     return true;
+  }
+
 }
+
+
+
 
