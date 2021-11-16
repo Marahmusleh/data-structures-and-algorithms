@@ -33,3 +33,23 @@ Returns the total number of nodes in the graph
 * getNodes(): Time: BigO(1), Space: BigO(1)
 * getNeighbors: Time: BigO(n), Space: BigO(n)
 * size(): Time: BigO(1), Space: BigO(1)
+
+### challenge 36
+* Implement a breadth-first traversal on a graph, by create method that it takes vertex and return a list of vertex in order that they visit.
+
+![img](./Screenshot_12.png)
+
+### Approach & Efficiency
+ Time: BigO(n^2)
+ Space: BigO(n)
+
+### challenge 37
+*Write a function called business trip Determine whether the trip is possible with direct flights, and how much it would cost.
+
+![img1](./challenge 37.png)
+
+Approach & Efficiency
+Time: BigO(n)
+Space: BigO(1)
+
+
