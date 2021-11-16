@@ -1,9 +1,9 @@
 package graphs;
 
-public class Node<T> {
+public class Vertex<T> {
   T value;
   Node next;
-  Node(T value){
+  public Node(T value){
     this.value = value;
   }
 }
