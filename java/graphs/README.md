@@ -46,10 +46,19 @@ Returns the total number of nodes in the graph
 ### challenge 37
 *Write a function called business trip Determine whether the trip is possible with direct flights, and how much it would cost.
 
-![img1](./challenge 37.png)
+![img](./challenge%2037.png)
 
 Approach & Efficiency
 Time: BigO(n)
 Space: BigO(1)
+
+### challenge 38
+* Implement a depth-first traversal on a graph, by create method that it takes vertex and return a list in pre order.
+
+![img](./chall38.png)
+
+### Approach & Efficiency
+ Time: BigO(n)
+ Space: BigO(1)
 
 
