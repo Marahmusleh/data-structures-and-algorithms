@@ -8,7 +8,6 @@ public class Graph<T> {
 
 
   Map<graph.Vertex<T>, ArrayList<graph.Vertex<T>>> map = new HashMap<>();
-
   List<graph.Vertex<T>> MyList = new ArrayList<>();
 
   public graph.Vertex<T> addNode(T value) {
@@ -31,8 +30,7 @@ public class Graph<T> {
     map.get(nodeOne).add(nodeTwo);
     map.get(nodeTwo).add(nodeOne);
   }
-
-
+  
   public ArrayList<graph.Vertex> getNodes() {
 
     if (map.isEmpty()) {
