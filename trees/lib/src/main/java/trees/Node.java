@@ -1,9 +1,9 @@
 package trees;
 
 public class Node<T> {
-  private Node<T> leftNode;
-  private Node<T> rightNode;
-  private T value;
+  public Node<T> leftNode;
+  public Node<T> rightNode;
+  public T value;
 
   public Node(T value) {
     this.value = value;

@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1c011ac-a03d-4c6d-b2d2-34436873e1aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../java/graphs/app/src/main/java/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/graphs/app/src/main/java/graphs/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +30,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="trees" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -50,6 +60,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/lib/src/main/java/trees/Queue.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/main/java/trees/Library.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/main/java/trees/BinarySearchTree.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/main/java/trees/BinaryTree.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/main/java/trees/Node.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1zXBKVwMAufqmcSdwUC6hJUF702" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,7 +82,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java/StackAndQueue" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -77,7 +94,7 @@
       <recent name="\\wsl$\Ubuntu\home\marah\401projects\data-structures-and-algorithms\trees" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LibraryTest.testTreeEmptyFizzBuzz">
+  <component name="RunManager" selected="Application.Library">
     <configuration name="Library" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11 (WSL) (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

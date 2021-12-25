@@ -14,6 +14,14 @@ const addOne = (arr) => {
   return array;
 };
 
+const products = (arr) => {
+  for(int i= 0; i<arr.length;i++){
+  if(arr[0] === "A" ||arr[0] === "I" ||arr[0] === "E" ||arr[0] === "O"  ||arr[i] === "U" ){
+  console.log(arr[i]);
+           }
+          }
+    }
+  
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 Write a function named `addExclamation` that takes an array of strings, and returns a new array of the same strings with an "!" added to the end.

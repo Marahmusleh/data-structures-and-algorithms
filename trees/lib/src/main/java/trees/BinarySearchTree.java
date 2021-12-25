@@ -1,7 +1,7 @@
 package trees;
 
 public  class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
-  private Node<T> root;
+  public Node<T> root;
 
   public void add(T data) {
     if (root==null) { // tree empty
@@ -28,9 +28,6 @@ public  class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
       }
     }
   }
-  public boolean contains(T value) {
-    return contains(root, value);
-  }
   private boolean contains(Node<T> root, T value) {
     if ( root == null) {
       return false;
@@ -42,6 +39,30 @@ public  class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
     return value.compareTo(current) < 0 //if the value less than the current value Implement the first statement
       ? contains(root.getLeftNode(), value)
       : contains(root.getRightNode(), value);
+  }
+
+  public boolean Contains(T data) {
+    while (root != null) {
+      if (root.getValue().compareTo(data) == 0) return true;
+      if (root.getValue().compareTo(data) > 0) root = root.leftNode;
+      else root = root.rightNode;
+    }
+    return false;
+  }
+
+  public boolean contains2(T data) {
+    Node<T> binaryTreeNode1 = root;
+
+    if(isEmpty()) return false;
+    while (binaryTreeNode1 != null) {
+      if (data.compareTo(binaryTreeNode1.getValue()) > 0)
+        binaryTreeNode1 = binaryTreeNode1.getRightNode();
+      else if (data.compareTo(binaryTreeNode1.getValue()) < 0)
+        binaryTreeNode1 = binaryTreeNode1.getLeftNode();
+      else
+        return true;
+    }
+    return false;
   }
 
   public Node<T> getRoot() {
