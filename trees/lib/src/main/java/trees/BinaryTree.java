@@ -219,7 +219,6 @@ public class BinaryTree<T extends Comparable<T>> {
       traverse111(root.getRightNode(), second);
     }
   }
-
   public boolean hasPathSum(Node<Integer> node, int sum) {
     boolean ans = false;
     int subSum = sum - node.getValue();
