@@ -30,7 +30,7 @@ public class Graph<T> {
     map.get(nodeOne).add(nodeTwo);
     map.get(nodeTwo).add(nodeOne);
   }
-  
+
   public ArrayList<graph.Vertex> getNodes() {
 
     if (map.isEmpty()) {
